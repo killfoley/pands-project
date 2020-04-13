@@ -10,7 +10,9 @@ import seaborn as sns
 
 df = pd.read_csv("iris_data_set.csv")
 
-#df.describe(include="all").to_csv("summary.txt", sep=' ')
+#print(df.describe(include="all"))
+
+df.describe(include="all").to_csv("summary.txt", sep=' ')
 
 plt.hist(df["sepal length"], color="skyblue")
 plt.title("sepal length")
