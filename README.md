@@ -6,3 +6,5 @@ The Iris flower data set is a multivariate data set introduced by the British st
 
 The data set consists of 50 samples from each of three species of Iris Flower (Iris Setosa, Iris Virginica and Iris Versicolor). Four features were measured from each sample: the length and the width of the sepals and petals, in centimetres. [1](https://en.wikipedia.org/wiki/Iris_flower_data_set)
 
+## The Data Set
+The data set consists of a set of 150 records under 5 attributes — Sepal length, Sepal width, Petal length, Petal width and Species-Labels. The data set was downloaded from the following link [Iris dataset.csv](https://tableconvert.com/?output=csv)
