@@ -14,6 +14,8 @@ df = pd.read_csv("iris_data_set.csv")
 
 df.describe(include="all").to_csv("summary.txt", sep=' ')
 
+df.describe(include="all").to_csv("summary.csv")
+
 plt.hist(df["sepal length"], color="skyblue")
 plt.title("sepal length")
 plt.xlabel("length in cm")
@@ -42,6 +44,10 @@ plt.ylabel("Number of flowers")
 plt.savefig("petal_width.png")
 plt.clf()
 
-sns.pairplot(df, hue="variety")
-plt.savefig("scatterplot_matrix")
+g = sns.pairplot(df, hue="variety", markers=["o", "s", "D"])
+plt.savefig("scatterplot_matrix.png")
+
+g = sns.pairplot(df, kind="reg")
+plt.savefig("scatterplot_matrix_regression.png")
+
 
