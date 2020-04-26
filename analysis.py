@@ -8,13 +8,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
+#Read in file
 df = pd.read_csv("iris_data_set.csv")
 
-#print(df.describe(include="all"))
-
+#Summarise data set and write to .txt and .csv files
 df.describe(include="all").to_csv("summary.txt", sep=' ')
 
 df.describe(include="all").to_csv("summary.csv")
+
+#plot histogram for each variable and save to .png
 
 plt.hist(df["sepal length"], color="skyblue")
 plt.title("sepal length")
@@ -44,9 +46,11 @@ plt.ylabel("Number of flowers")
 plt.savefig("petal_width.png")
 plt.clf()
 
+#Scatterplot matrix of all variable pairings
 g = sns.pairplot(df, hue="variety", markers=["o", "s", "D"])
 plt.savefig("scatterplot_matrix.png")
 
+#Scatterplot matrix of all variable pairings with linear regression
 g = sns.pairplot(df, kind="reg")
 plt.savefig("scatterplot_matrix_regression.png")
 
