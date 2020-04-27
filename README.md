@@ -17,12 +17,53 @@ The python program is entitled *analysis.py*. To run the code one must navigate 
 `import numpy as np`  
 `import seaborn as sns`  
 
-The **pandas** library is used to perform several useful functions in this project. It reads the .csv file, saves it as a dataframe, creates a summary of the data and writes that summary to a text file.  
-`df = pd.read_csv()`  
-`df.describe()`  
-`df.to_csv()`  
+The **pandas** library is used to perform several useful functions in this project. It reads in the initial data from a .csv file, saves it as a *dataframe*, creates a summary of the data and writes that summary to a text file.  
   
 **matplotlib.pyplot** is used to plot a histogram for each variable.  
   
-**seaborn** is used to plot the scatterplot matrix
+**seaborn** is used to plot the scatterplot matrix x 2 and violinplots
 
+### Data Import
+The data is read in using function from pandas and first 10 lines are displayed.  
+
+`df = pd.read_csv("iris_data_set.csv")`  
+`df.columns = ["sepal length", "sepal width", "petal length", "petal width", "variety"]`
+
+`#head() command shows first x number of lines. Specify number in bracket`  
+`print(df.head(10))`  
+  
+|   | sepal length  | sepal width  | petal length  | petal width |variety|
+|---|:-------------:|:------------:|:-------------:|:-----------:|:-----:|
+| 0           | 5.1          |3.5          | 1.4          |0.2  |Setosa|  
+| 1           | 4.9          |3.0          | 1.4          |0.2  |Setosa|  
+| 2           | 4.7          |3.2          | 1.3         | 0.2  |Setosa|  
+| 3           | 4.6          |3.1          | 1.5         | 0.2  |Setosa|  
+| 4           | 5.0          |3.6          | 1.4         | 0.2  |Setosa|  
+| 5           | 5.4          |3.9          | 1.7         | 0.4  |Setosa|  
+| 6           | 4.6          |3.4          | 1.4         | 0.3  |Setosa|  
+| 7           | 5.0          |3.4          | 1.5         | 0.2  |Setosa|  
+| 8           | 4.4          |2.9          | 1.4         | 0.2  |Setosa|  
+| 9           | 4.9          |3.1          | 1.5         | 0.1  |Setosa|  
+
+### Information about the Data Set
+Display the number of rows and columns.  
+  
+`print(df.shape)`  
+  
+Output: (150, 5)
+  
+### Display the Unique Flower Varieties
+`df["variety"].unique()`  
+`print(df.groupby("variety").size())`
+
+Output:  
+Setosa  50
+Versicolor: 50
+Virginica:  50
+dtype:  int64
+
+### Create a Summary of Each Variable and Write to a Single Text File
+`summary = df.describe()`  
+`summaryt = summary.transpose()`  
+`summaryt["mean"] = summaryt["mean"].round(4)`  
+`summaryt["std"] = summaryt["std"].round(4)`  
