@@ -62,8 +62,19 @@ Versicolor: 50
 Virginica:  50
 dtype:  int64
 
-### Create a Summary of Each Variable and Write to a Single Text File
+### Create a Summary of Each Variable
 `summary = df.describe()`  
 `summaryt = summary.transpose()`  
 `summaryt["mean"] = summaryt["mean"].round(4)`  
 `summaryt["std"] = summaryt["std"].round(4)`  
+
+|           |count    |mean     |std  |min  |25%   |50%  |75%  |max
+|    ---    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|   
+**sepal length**  |150.0  |5.8433  |0.8281  |4.3  |5.1  |5.80  |6.4  |7.9
+**sepal width**   |150.0  |3.0573  |0.4359  |2.0  |2.8  |3.00  |3.3  |4.4
+**petal length**  |150.0  |3.7580  |1.7653  |1.0  |1.6  |4.35  |5.1  |6.9
+**petal width**   |150.0  |1.1993  |0.7622  |0.1  |0.3  |1.30  |1.8  |2.5
+
+### Write the Summary to a Single Text File
+`summaryt.to_csv("summary.txt", sep=',')`
+### Histograms
