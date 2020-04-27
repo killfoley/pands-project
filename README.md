@@ -4,6 +4,8 @@
 ## Introduction
 The Iris flower data set is a multivariate data set introduced by the British statistician and biologist Ronald Fisher in his 1936 paper *The use of multiple measurements in taxonomic problems*. It is sometimes called Anderson’s Iris data set because Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species. Two of the three species were collected in the Gaspé Peninsula “all from the same pasture, and picked on the same day and measured at the same time by the same person with the same apparatus”. (https://en.wikipedia.org/wiki/Iris_flower_data_set)
 
+![flowers](Images/iris_varieties.png)
+
 ## The Data Set
 The data set consists of 50 samples from each of three species of Iris Flower (Iris Setosa, Iris Virginica and Iris Versicolor). Four features were measured from each sample: sepal length, sepal width, petal length and petal width, in centimetres. The data set was downloaded from the following link [Iris dataset.csv](https://tableconvert.com/?output=csv)
 
@@ -44,7 +46,7 @@ The data is read in using function from pandas and first 10 lines are displayed.
 | 7           | 5.0          |3.4          | 1.5         | 0.2  |Setosa|  
 | 8           | 4.4          |2.9          | 1.4         | 0.2  |Setosa|  
 | 9           | 4.9          |3.1          | 1.5         | 0.1  |Setosa|  
-
+  
 ### Information about the Data Set
 Display the number of rows and columns.  
   
@@ -57,24 +59,23 @@ Output: (150, 5)
 `print(df.groupby("variety").size())`
 
 Output:  
-Setosa  50
-Versicolor: 50
-Virginica:  50
-dtype:  int64
+Setosa:  50  
+Versicolor: 50  
+Virginica:  50  
+dtype:  int64  
 
 ### Create a Summary of Each Variable
-`summary = df.describe()`  
+`summary = df.describe(include="all")`  
 `summaryt = summary.transpose()`  
-`summaryt["mean"] = summaryt["mean"].round(4)`  
-`summaryt["std"] = summaryt["std"].round(4)`  
-
+  
 |           |count    |mean     |std  |min  |25%   |50%  |75%  |max
 |    ---    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|   
 **sepal length**  |150.0  |5.8433  |0.8281  |4.3  |5.1  |5.80  |6.4  |7.9
 **sepal width**   |150.0  |3.0573  |0.4359  |2.0  |2.8  |3.00  |3.3  |4.4
 **petal length**  |150.0  |3.7580  |1.7653  |1.0  |1.6  |4.35  |5.1  |6.9
 **petal width**   |150.0  |1.1993  |0.7622  |0.1  |0.3  |1.30  |1.8  |2.5
-
+**variety** |150 | 3 | Virginica | 50 | NaN | NaN | NaN | NaN | NaN | NaN
+  
 ### Write the Summary to a Single Text File
 `summaryt.to_csv("summary.txt", sep=',')`
 ### Histograms
