@@ -11,10 +11,16 @@ import seaborn as sns
 #Read in file
 df = pd.read_csv("iris_data_set.csv")
 
-#Summarise data set and write to .txt and .csv files
-df.describe(include="all").to_csv("summary.txt", sep=' ')
+df.columns = ["sepal length", "sepal width", "petal length", "petal width", "variety"]
 
-df.describe(include="all").to_csv("summary.csv")
+#Summarise data set and write to .txt and .csv files
+summary = df.describe()
+summaryt = summary.transpose()
+
+#df.describe(include="all").to_csv("summary.txt", sep=' ')
+#df.describe(include="all").to_csv("summary.csv")
+
+summaryt.to_csv("summary.txt", sep=',')
 
 #plot histogram for each variable and save to .png
 
