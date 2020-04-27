@@ -18,7 +18,7 @@ print(df.head(10))
 #Show number of rows and columns
 print(df.shape)
 
-#Show the unique varieties of iris flower
+#Show the unique varieties of df flower
 df["variety"].unique()
 print(df.groupby("variety").size())
 
@@ -85,3 +85,29 @@ sns.violinplot(x="variety", y="petal length", data=df)
 plt.subplot(2,2,4)
 sns.violinplot(x="variety", y="sepal width", data=df)
 plt.savefig("violinplot.png")
+
+#Split the data frame into the 3 distinct varieties
+#iris_setosa = df[df["variety"] == "setosa"]
+#iris_virginica = df[df["variety"] == "virginica"]
+#iris_versicolor = df[df["variety"] == "versicolor"]
+
+#Plotting histogram & probability density function (PDF) using seaborn FacetGrid
+sns.FacetGrid(df, hue="variety") \
+   .map(sns.distplot, "sepal length") \
+   .add_legend();
+plt.savefig("sepal_length_PDF.png")
+
+sns.FacetGrid(df, hue="variety") \
+   .map(sns.distplot, "sepal width") \
+   .add_legend();
+plt.savefig("sepal_width_PDF.png")
+
+sns.FacetGrid(df, hue="variety") \
+   .map(sns.distplot, "petal length") \
+   .add_legend();
+plt.savefig("petal_length_PDF.png")
+
+sns.FacetGrid(df, hue="variety") \
+   .map(sns.distplot, "petal width") \
+   .add_legend();
+plt.savefig("petal_width_PDF.png")
