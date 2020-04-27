@@ -70,7 +70,7 @@ g = sns.pairplot(df, hue="variety", markers=["o", "s", "D"])
 plt.savefig("scatterplot_matrix.png")
 
 #Scatterplot matrix of all variable pairings with linear regression
-g = sns.pairplot(df, kind="reg")
+g = sns.pairplot(df, hue="variety", kind="reg", markers=["o", "s", "D"])
 plt.savefig("scatterplot_matrix_regression.png")
 
 #Violinplot of data
