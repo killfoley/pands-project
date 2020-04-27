@@ -79,9 +79,16 @@ dtype:  int64
 ### Write the Summary to a Single Text File
 `summaryt.to_csv("summary.txt", sep=',')`
 ### Histograms
-
-
-
+From the petal length and less so the petal width histograms we see that one of the flower varieties is distinguishable with a near 100% accuracy. The identity of the flower variety and the confirmation of this observation will be visibile in the scatter plots and violin plots.  
+    
+![sepal legth](sepal_length.png)  
+  
+![sepal width](sepal_width.png)  
+  
+![petal length](petal_length.png)  
+  
+![petal width](petal_width.png)  
+  
 ## References
 Introduction and information https://en.wikipedia.org/wiki/Iris_flower_data_set  
 Transpose Function https://note.nkmk.me/en/python-pandas-t-transpose/  
