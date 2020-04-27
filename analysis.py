@@ -25,6 +25,8 @@ print(df.groupby("variety").size())
 #Summarise data set and write to .txt and .csv files
 summary = df.describe()
 summaryt = summary.transpose()
+summaryt["mean"] = summaryt["mean"].round(4)
+summaryt["std"] = summaryt["std"].round(4)
 
 print(summaryt)
 
