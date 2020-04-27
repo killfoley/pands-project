@@ -10,12 +10,25 @@ import seaborn as sns
 
 #Read in file
 df = pd.read_csv("iris_data_set.csv")
-
 df.columns = ["sepal length", "sepal width", "petal length", "petal width", "variety"]
+
+#head() command shows first x number of lines. Specify number in bracket
+print(df.head(10))
+
+print(df.mean())
+print(df.std())
+#Show number of rows and columns
+print(df.shape)
+
+#Show the unique varieties of iris flower
+df["variety"].unique()
+print(df.groupby("variety").size())
 
 #Summarise data set and write to .txt and .csv files
 summary = df.describe()
 summaryt = summary.transpose()
+
+print(summaryt)
 
 #df.describe(include="all").to_csv("summary.txt", sep=' ')
 #df.describe(include="all").to_csv("summary.csv")
