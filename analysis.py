@@ -15,8 +15,6 @@ df.columns = ["sepal length", "sepal width", "petal length", "petal width", "var
 #head() command shows first x number of lines. Specify number in bracket
 print(df.head(10))
 
-print(df.mean())
-print(df.std())
 #Show number of rows and columns
 print(df.shape)
 
