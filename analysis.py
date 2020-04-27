@@ -37,28 +37,28 @@ summaryt.to_csv("summary.txt", sep=',')
 
 #plot histogram for each variable and save to .png
 
-plt.hist(df["sepal length"], color="skyblue")
+plt.hist(df["sepal length"], color="skyblue", ec="black")
 plt.title("sepal length")
 plt.xlabel("length in cm")
 plt.ylabel("Frequency")
 plt.savefig("sepal_length.png")
 plt.clf()
 
-plt.hist(df["sepal width"], color="green")
+plt.hist(df["sepal width"], color="green", ec="black")
 plt.title("sepal width")
 plt.xlabel("width in cm")
 plt.ylabel("Frequency")
 plt.savefig("sepal_width.png")
 plt.clf()
 
-plt.hist(df["petal length"], color="orange")
+plt.hist(df["petal length"], color="orange", ec="black")
 plt.title("petal length")
 plt.xlabel("length in cm")
 plt.ylabel("Frequency")
 plt.savefig("petal_length.png")
 plt.clf()
 
-plt.hist(df["petal width"], color="purple")
+plt.hist(df["petal width"], color="purple", ec="black")
 plt.title("petal width")
 plt.xlabel("width in cm")
 plt.ylabel("Frequency")

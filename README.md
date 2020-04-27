@@ -68,13 +68,13 @@ dtype:  int64
 `summary = df.describe(include="all")`  
 `summaryt = summary.transpose()`  
   
-|           |count    |mean     |std  |min  |25%   |50%  |75%  |max
-|    ---    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|   
-**sepal length**  |150.0  |5.8433  |0.8281  |4.3  |5.1  |5.80  |6.4  |7.9
-**sepal width**   |150.0  |3.0573  |0.4359  |2.0  |2.8  |3.00  |3.3  |4.4
-**petal length**  |150.0  |3.7580  |1.7653  |1.0  |1.6  |4.35  |5.1  |6.9
-**petal width**   |150.0  |1.1993  |0.7622  |0.1  |0.3  |1.30  |1.8  |2.5
-**variety** |150 | 3 | Virginica | 50 | NaN | NaN | NaN | NaN | NaN | NaN
+|           |count    |unique | top | freq | mean     |std  |min  |25%   |50%  |75%  |max
+|    ---    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:   
+**sepal length**  |150.0 | NaN | NaN | NaN |5.8433  |0.8281  |4.3  |5.1  |5.80  |6.4  |7.9
+**sepal width**   |150.0 | NaN | NaN | NaN  |3.0573  |0.4359  |2.0  |2.8  |3.00  |3.3  |4.4
+**petal length**  |150.0 | NaN | NaN | NaN  |3.7580  |1.7653  |1.0  |1.6  |4.35  |5.1  |6.9
+**petal width**   |150.0 | NaN | NaN | NaN  |1.1993  |0.7622  |0.1  |0.3  |1.30  |1.8  |2.5
+**variety** |150 | 3 | Virginica | 50 | NaN | NaN | NaN | NaN | NaN | NaN | NaN
   
 ### Write the Summary to a Single Text File
 `summaryt.to_csv("summary.txt", sep=',')`
@@ -93,4 +93,6 @@ From the petal length and less so the petal width histograms we see that one of 
 Introduction and information https://en.wikipedia.org/wiki/Iris_flower_data_set  
 Transpose Function https://note.nkmk.me/en/python-pandas-t-transpose/  
 Analysis of Iris in Python https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342  
+Histogram Formatting https://stackoverflow.com/questions/42542252/cannot-get-histogram-to-show-separated-bins-with-vertical-lines  
+
 
