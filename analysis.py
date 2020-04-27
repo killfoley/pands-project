@@ -73,4 +73,15 @@ plt.savefig("scatterplot_matrix.png")
 g = sns.pairplot(df, kind="reg")
 plt.savefig("scatterplot_matrix_regression.png")
 
-
+#Violinplot of data
+sns.set(style="whitegrid")
+plt.figure(figsize=(12,10))
+plt.subplot(2,2,1)
+sns.violinplot(x="variety", y="sepal length", data=df)
+plt.subplot(2,2,2)
+sns.violinplot(x="variety", y="sepal width", data=df)
+plt.subplot(2,2,3)
+sns.violinplot(x="variety", y="petal length", data=df)
+plt.subplot(2,2,4)
+sns.violinplot(x="variety", y="sepal width", data=df)
+plt.savefig("violinplot.png")
