@@ -14,10 +14,12 @@ The python program is entitled *analysis.py*. To run the code one must navigate 
 
 ## Explaining The Code
 ### Python Libraries Used
-`import pandas as pd`  
-`import matplotlib.pyplot as plt`  
-`import numpy as np`  
-`import seaborn as sns`  
+```
+import pandas as pd 
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+```  
 
 The **pandas** library is used to perform several useful functions in this project. It reads in the initial data from a .csv file, saves it as a *dataframe*, creates a summary of the data and writes that summary to a text file.  
   
@@ -27,12 +29,13 @@ The **pandas** library is used to perform several useful functions in this proje
 
 ### Data Import
 The data is read in using function from pandas and first 10 lines are displayed.  
+```
+df = pd.read_csv("iris_data_set.csv")  
+df.columns = ["sepal length", "sepal width", "petal length", "petal width", "variety"]
 
-`df = pd.read_csv("iris_data_set.csv")`  
-`df.columns = ["sepal length", "sepal width", "petal length", "petal width", "variety"]`
-
-`#head() command shows first x number of lines. Specify number in bracket`  
-`print(df.head(10))`  
+#head() command shows first x number of lines. Specify number in bracket  
+print(df.head(10))  
+```
   
 |   | sepal length  | sepal width  | petal length  | petal width |variety|
 |---|:-------------:|:------------:|:-------------:|:-----------:|:-----:|
@@ -55,9 +58,10 @@ Display the number of rows and columns.
 Output: (150, 5)
   
 ### Display the Unique Flower Varieties
-`df["variety"].unique()`  
-`print(df.groupby("variety").size())`
-
+```
+df["variety"].unique()  
+print(df.groupby("variety").size())
+```
 Output:  
 Setosa:  50  
 Versicolor: 50  
@@ -65,9 +69,10 @@ Virginica:  50
 dtype:  int64  
 
 ### Create a Summary of Each Variable
-`summary = df.describe(include="all")`  
-`summaryt = summary.transpose()`  
-  
+```
+summary = df.describe(include="all")  
+summaryt = summary.transpose()  
+```  
 |           |count    |unique | top | freq | mean     |std  |min  |25%   |50%  |75%  |max
 |    ---    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:   
 **sepal length**  |150.0 | NaN | NaN | NaN |5.8433  |0.8281  |4.3  |5.1  |5.80  |6.4  |7.9
