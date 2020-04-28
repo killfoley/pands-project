@@ -77,7 +77,7 @@ dtype:  int64
 **variety** |150 | 3 | Virginica | 50 | NaN | NaN | NaN | NaN | NaN | NaN | NaN
   
 ### Write the Summary to a Single Text File
-`summaryt.to_csv("summary.txt", sep=',')`
+```summaryt.to_csv("summary.txt", sep=',')```
 ### Histograms
 From the petal length and less so the petal width histograms we see that one of the flower varieties is distinguishable with a near 100% accuracy. The identity of the flower variety and the confirmation of this observation will be visibile in the scatter plots and violin plots.  
     
@@ -90,10 +90,12 @@ From the petal length and less so the petal width histograms we see that one of 
 ![petal width](petal_width.png)  
   
 ### Histogramswith Probability Density Function (PDF)
-Overlaying the Probability Denisty Function on the Histograms we can see from the petal length plot that  
-*if petal length < 2.1 then variety is "Setosa" probability of 100%*  
-*else if petal length > 2.1 and petal length < 5 then variety is "Versicolor" probablity of ~90%*  
-*else if petal length > 4.8 then variety is "Virginica probablity of ~+90%*  
+Overlaying the Probability Denisty Function on the histograms we can see that either the petal length plot or the petal width plot would be useful to aid in distinguishing the type of Iris flower variety. I have chosen petal legth. The following observations can be made.  
+* *if petal length < 2.1 then variety is "Setosa" probability of 100%*  
+  
+* *else if petal length > 2.1 and petal length < 5 then variety is "Versicolor" probablity of >90%*  
+  
+* *else if petal length > 4.8 then variety is "Virginica" probablity of >90%*  
     
 ![sepal legth PDF](sepal_length_PDF.png)  
   
@@ -103,7 +105,19 @@ Overlaying the Probability Denisty Function on the Histograms we can see from th
   
 ![petal width PDF](petal_width_PDF.png)  
   
-### 
+### Seaborn Pairplot
+The scatterplot matrix gives a wonderful visual of each pair of variables in the data set. Specifying the `hue` parameter plots KDE (kernel density estimation) along the diagonal.  
+  
+![scatterplot_matrix](scatterplot_matrix.png)
+  
+Pairplot with linear regression fitted  
+  
+![scatterplot_matrix_reg](scatterplot_matrix_regression.png)
+
+### Violin Plot
+A violin plot is very similar to a box plot with the addition of a rotated kernel density plot on each side. Unlike a box plot the violin plot shows the full distribution of data.  
+  
+![violin plot](violinplot.png)
 
 ## References
 Introduction and information https://en.wikipedia.org/wiki/Iris_flower_data_set  
