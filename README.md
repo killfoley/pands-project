@@ -89,6 +89,22 @@ From the petal length and less so the petal width histograms we see that one of 
   
 ![petal width](petal_width.png)  
   
+### Histogramswith Probability Density Function (PDF)
+Overlaying the Probability Denisty Function on the Histograms we can see from the petal length plot that  
+*if petal length < 2.1 then variety is "Setosa" probability of 100%*  
+*else if petal length > 2.1 and petal length < 5 then variety is "Versicolor" probablity of ~90%*  
+*else if petal length > 4.8 then variety is "Virginica probablity of ~+90%*  
+    
+![sepal legth PDF](sepal_length_PDF.png)  
+  
+![sepal width PDF](sepal_width_PDF.png)  
+  
+![petal length PDF](petal_length_PDF.png)  
+  
+![petal width PDF](petal_width_PDF.png)  
+  
+### 
+
 ## References
 Introduction and information https://en.wikipedia.org/wiki/Iris_flower_data_set  
 Transpose Function https://note.nkmk.me/en/python-pandas-t-transpose/  

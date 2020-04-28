@@ -92,22 +92,22 @@ plt.savefig("violinplot.png")
 #iris_versicolor = df[df["variety"] == "versicolor"]
 
 #Plotting histogram & probability density function (PDF) using seaborn FacetGrid
-sns.FacetGrid(df, hue="variety") \
+sns.FacetGrid(df, hue="variety", height=5) \
    .map(sns.distplot, "sepal length") \
    .add_legend();
 plt.savefig("sepal_length_PDF.png")
 
-sns.FacetGrid(df, hue="variety") \
+sns.FacetGrid(df, hue="variety", height=5) \
    .map(sns.distplot, "sepal width") \
    .add_legend();
 plt.savefig("sepal_width_PDF.png")
 
-sns.FacetGrid(df, hue="variety") \
+sns.FacetGrid(df, hue="variety", height=5) \
    .map(sns.distplot, "petal length") \
    .add_legend();
 plt.savefig("petal_length_PDF.png")
 
-sns.FacetGrid(df, hue="variety") \
+sns.FacetGrid(df, hue="variety", height=5) \
    .map(sns.distplot, "petal width") \
    .add_legend();
 plt.savefig("petal_width_PDF.png")
