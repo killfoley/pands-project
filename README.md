@@ -125,9 +125,15 @@ A violin plot is very similar to a box plot with the addition of a rotated kerne
 ![violin plot](violinplot.png)
 
 ## References
+Course Notes  
 Introduction and information https://en.wikipedia.org/wiki/Iris_flower_data_set  
 Transpose Function https://note.nkmk.me/en/python-pandas-t-transpose/  
 Analysis of Iris in Python https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342  
 Histogram Formatting https://stackoverflow.com/questions/42542252/cannot-get-histogram-to-show-separated-bins-with-vertical-lines  
-
-
+Seaborn notes https://seaborn.pydata.org/tutorial/distributions.html
+Matplotlib.pyplot notes https://matplotlib.org/3.1.0/tutorials/introductory/sample_plots.html#sphx-glr-tutorials-introductory-sample-plots-py  
+Iris Data Set Analysis https://medium.com/analytics-vidhya/exploratory-data-analysis-uni-variate-analysis-of-iris-data-set-690c87a5cd40  
+Markdown Tips https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#code  
+Violin Plot Explanation https://en.wikipedia.org/wiki/Violin_plot  
+Visualisation and Understanding https://mc.ai/visualization-and-understanding-iris-dataset/  
+Pandas Write to File https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_csv.html  
